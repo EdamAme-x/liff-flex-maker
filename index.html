@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIFFLEX-by ame-x / @macl2189</title>
+</head>
+<body>
+    <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+    <input type="text" placeholder="msg" id="msg">
+    <button onclick="send()">Send</button>
+    by @macl2189 / ame_xにご連絡ください
+    <script>
+        liff.init({
+            liffId: '2000122448-Ry6qENzK', 
+            withLoginOnExternalBrowser: true, 
+        }).then(() => {
+            
+        });
+
+        function send() {
+            const val = JSON.parse(document.getElementById("msg").value);
+            liff.sendMessages(val)
+        }
+    </script>
+</body>
+</html>
