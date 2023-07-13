@@ -21,7 +21,7 @@
         function send() {
             try {
                 const val = JSON.parse(document.getElementById("msg").value);
-                liff.sendMessages(val)
+                liff.sendMessages([val])
             }catch(err){
                 alert(err)
             }
