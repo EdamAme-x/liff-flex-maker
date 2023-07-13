@@ -19,8 +19,12 @@
         });
 
         function send() {
-            const val = JSON.parse(document.getElementById("msg").value);
-            liff.sendMessages(val)
+            try {
+                const val = JSON.parse(document.getElementById("msg").value);
+                liff.sendMessages(val)
+            }catch(err){
+                alert(err)
+            }
         }
     </script>
 </body>
